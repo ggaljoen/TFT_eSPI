@@ -541,6 +541,9 @@ void TFT_eSPI::initBus(void) {
 #ifdef TOUCH_CS
   pinMode(TOUCH_CS, OUTPUT);
   digitalWrite(TOUCH_CS, HIGH); // Chip select high (inactive)
+  pinMode(TOUCH_MOSI, OUTPUT);	
+  pinMode(TOUCH_MISO, INPUT);
+  pinMode(TOUCH_CLK, OUTPUT);
 #endif
 
 // In parallel mode and with the RP2040 processor, the TFT_WR line is handled in the  PIO
